@@ -1,0 +1,95 @@
+/* Forums title in purple */
+.forum-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: purple;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* All other section headers in black */
+.living-section,
+.section-header {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: black; /* Black for all other section headers */
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Remove underlines from links while keeping icons */
+.card-title a,
+.card-text a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Make main headings bold */
+.card-title a {
+  font-weight: bold;
+}
+
+/* Remove any default link styling */
+a {
+  text-decoration: none;
+}
+
+/* Ensure links don't show underline on hover */
+a:hover {
+  text-decoration: none;
+}
+
+/* Remove any potential bootstrap link underlines */
+.card-title a:hover,
+.card-text a:hover {
+  text-decoration: none;
+}
+
+/* Keep the card hover effect */
+.forum-card:hover {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Footer Styling */
+.footer-section {
+  background-color: #f8f9fa; /* Light background */
+}
+
+.footer-heading {
+  font-weight: bold;
+  color: #0056b3; /* Blue color for headings */
+}
+
+.footer-section a {
+  text-decoration: none;
+}
+
+/* Ensure the input field takes more space */
+.email-input {
+  width: 100%;  /* Makes input field take full width */
+  min-width: 250px; /* Adjust this if needed */
+  flex-grow: 1; /* Expands within the flex container */
+}
+
+/* Expand the input group container */
+.newsletter-card .input-group {
+  width: 100%; /* Ensure it takes full available width */
+  display: flex; /* Ensure items are arranged properly */
+  gap: 10px; /* Adds spacing between input and button */
+}
+
+/* Ensure button does not shrink */
+.subscribe-btn {
+  white-space: nowrap; /* Prevents text from breaking */
+}
+
+/* Make the email input wider */
+.email-input {
+  flex-grow: 1; /* Expands to fill available space */
+  min-width: 200px; /* Ensures minimum visibility */
+}
+
+/* Adjust the container if needed */
+.newsletter-card .input-group {
+  width: 100%; /* Ensures full width usage */
+}
