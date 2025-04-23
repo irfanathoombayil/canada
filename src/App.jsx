@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import './App.css'
 import Forum from './components/forum'
+import Post from './components/Post'
+import view from './components/view'
+
 
 
 function App() {
@@ -9,6 +12,9 @@ function App() {
   return (
     <>
       <Forum/>
+      <Post/>
+      <view/>
+     
     </>
   )
 }

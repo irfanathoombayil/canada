@@ -1,25 +1,194 @@
+/* Navigation Bar Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px; /* Increased horizontal padding to make nav bar wider */
+  background-color: #9c2e6a;
+  border-bottom: 1px solid #e1e1e1;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  width: 100%; /* Ensure full width */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #f8f4f6;
+  text-decoration: none;
+}
+
+.main-nav {
+  flex-grow: 1;
+  margin: 0 40px; /* Increased margin to make nav links spread out more */
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.nav-links li {
+  margin: 0 25px; /* Increased spacing between nav items */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #f1eaea;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 0;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #9c2e6a;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-toggle i {
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+.post-ad-btn {
+  background: linear-gradient(135deg, #ff6b6b, #a3276a);
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.post-ad-btn:hover {
+  background-color: #8a2660;
+}
+
+/* Post to Forum button - using purple color to match site theme */
+.post-forum-btn {
+  background: linear-gradient(135deg, #ff6b6b, #a3276a);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.post-forum-btn:hover {
+  background-color: #8a2660;
+  color: white;
+}
+
+.icon-link {
+  color: #ffffff;
+  font-size: 20px;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+.icon-link:hover {
+  color: #f1e9ee;
+}
+.nav-actions .icon-link {
+  color: #ffffff !important; /* Using !important to override any other styles */
+  font-size: 20px;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+/* Also update any i elements that might be inside the links */
+.nav-actions .icon-link i,
+.nav-actions a i {
+  color: #ffffff !important;
+}
+
+.nav-actions .icon-link:hover,
+.nav-actions .icon-link:hover i,
+.nav-actions a:hover i {
+  color: #f1e9ee !important;
+}
+
+/* Breadcrumb Styles */
+.breadcrumb-container {
+  background-color: #f8f9fa;
+  padding: 8px 0;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.breadcrumb {
+  margin-bottom: 0;
+  background-color: transparent;
+  padding: 0;
+}
+
+.breadcrumb-item a {
+  color: #6c757d;
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+  color: #9c2e6a;
+  text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+  color: #333;
+}
+
 /* Forums title in purple */
 .forum-title {
   font-weight: bold;
   font-size: 1.5rem;
-  color: purple;
+  color: #9c2e6a;
   margin-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 /* All other section headers in black */
-.living-section,
-.section-header {
+.living-section, .section-header {
   font-weight: bold;
   font-size: 1.5rem;
-  color: black; /* Black for all other section headers */
-  margin-top: 20px;
-  margin-bottom: 10px;
+  color: black;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.living-section i, .section-header i {
+  margin-right: 10px;
+  color: #9c2e6a;
 }
 
 /* Remove underlines from links while keeping icons */
-.card-title a,
-.card-text a {
+.card-title a, .card-text a {
   text-decoration: none;
   color: inherit;
 }
@@ -29,67 +198,148 @@
   font-weight: bold;
 }
 
-/* Remove any default link styling */
-a {
-  text-decoration: none;
+/* Cards hover effect */
+.forum-card {
+  margin-bottom: 10px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  border: 1px solid #e1e1e1;
 }
 
-/* Ensure links don't show underline on hover */
-a:hover {
-  text-decoration: none;
-}
-
-/* Remove any potential bootstrap link underlines */
-.card-title a:hover,
-.card-text a:hover {
-  text-decoration: none;
-}
-
-/* Keep the card hover effect */
 .forum-card:hover {
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card-title {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.card-title a:hover {
+  color: #9c2e6a;
+}
+
+/* Search box styling */
+.search-box {
+  margin-bottom: 20px;
+}
+
+.search-box .input-group-text {
+  background-color: #fff;
+  border-right: none;
+}
+
+.search-box .form-control {
+  border-left: none;
+}
+
+.search-box .form-control:focus {
+  box-shadow: none;
+  border-color: #ced4da;
 }
 
 /* Footer Styling */
 .footer-section {
-  background-color: #f8f9fa; /* Light background */
+  background-color: #f8f9fa;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin-top: 40px;
 }
 
 .footer-heading {
   font-weight: bold;
-  color: #0056b3; /* Blue color for headings */
+  color: #0056b3;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
 }
 
 .footer-section a {
   text-decoration: none;
 }
 
+.footer-section a:hover {
+  color: #9c2e6a !important;
+}
+
+/* Newsletter Card */
+.newsletter-card {
+  background-color: #f1f1f1;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.newsletter-card .footer-heading {
+  margin-bottom: 10px;
+}
+
 /* Ensure the input field takes more space */
 .email-input {
-  width: 100%;  /* Makes input field take full width */
-  min-width: 250px; /* Adjust this if needed */
-  flex-grow: 1; /* Expands within the flex container */
+  flex-grow: 1;
+  min-width: 150px;
 }
 
 /* Expand the input group container */
 .newsletter-card .input-group {
-  width: 100%; /* Ensure it takes full available width */
-  display: flex; /* Ensure items are arranged properly */
-  gap: 10px; /* Adds spacing between input and button */
+  width: 100%;
+  display: flex;
+  gap: 5px;
 }
 
 /* Ensure button does not shrink */
 .subscribe-btn {
-  white-space: nowrap; /* Prevents text from breaking */
+  white-space: nowrap;
+  background-color: #9c2e6a;
+  border-color: #9c2e6a;
 }
 
-/* Make the email input wider */
-.email-input {
-  flex-grow: 1; /* Expands to fill available space */
-  min-width: 200px; /* Ensures minimum visibility */
+.subscribe-btn:hover {
+  background-color: #8a2660;
+  border-color: #8a2660;
 }
 
-/* Adjust the container if needed */
-.newsletter-card .input-group {
-  width: 100%; /* Ensures full width usage */
+/* Social Media Icons */
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a:hover {
+  color: #9c2e6a !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .nav-links {
+    display: none;
+  }
+  
+  header {
+    padding: 10px 15px;
+  }
+  
+  .logo-text {
+    font-size: 20px;
+  }
+  
+  .main-nav {
+    margin: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .post-ad-btn, .post-forum-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  
+  .icon-link {
+    font-size: 18px;
+    margin-left: 10px;
+  }
+  
+  .forum-title, .living-section, .section-header {
+    font-size: 1.3rem;
+  }
 }

@@ -1,10 +1,53 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 function ForumsPage() {
+  
   return (
     <div>
+      {/* Navigation Bar */}
+      <header>
+        <div className="logo-container">
+          <a href="/">
+            <div className="logo-text">Canada Living</div>
+          </a>
+        </div>
+        
+        <nav className="main-nav">
+          <ul className="nav-links">
+            <li><a href="/properties">Properties</a></li>
+            <li><a href="/vehicles">Vehicles</a></li>
+            <li><a href="/classifieds">Classifieds</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/jobs">Jobs</a></li>
+            <li className="dropdown">
+              <a href="#" className="dropdown-toggle">More <i className="fas fa-chevron-down"></i></a>
+            </li>
+          </ul>
+        </nav>
+        
+        <div className="nav-actions">
+          <button className="post-ad-btn"><i className="fas fa-plus"></i> Post Ad</button>
+          <a href="/favorites" className="icon-link"><i className="far fa-heart"></i></a>
+          <a href="/account" className="icon-link"><i className="fas fa-user"></i></a>
+        </div>
+      </header>
+
+      {/* Breadcrumb Navigation */}
+      <div className="breadcrumb-container">
+        <div className="container">
+          <nav aria-label="breadcrumb">
+            <ol className="breadcrumb">
+              <li className="breadcrumb-item"><a href="/">Home</a></li>
+              <li className="breadcrumb-item"><a href="/forum">Forum</a></li>
+              <li className="breadcrumb-item active" aria-current="page">News</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+
       <div className="container mt-4">
         <div className="row">
           <div className="col-md-9">
@@ -281,6 +324,18 @@ function ForumsPage() {
               </div>
             </div>
           </div>
+          
+          {/* Right Sidebar */}
+          <div className="col-md-3">
+            <div className="text-center mb-4">
+            <button 
+                className="post-forum-btn w-100" 
+                onClick={() => Navigate('/C:\Canada Livings React\Canada Livings\src\components\Post.jsx')}
+              >
+                Post to Forum
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -345,7 +400,7 @@ function ForumsPage() {
           {/* Social Media Icons */}
           <div className="row mt-4">
             <div className="col-12 text-center">
-              <a href="#" className="text-dark me-3"><i className="fab fa-instagram fa-2x"></i></a>
+            <a href="#" className="text-dark me-3"><i className="fab fa-instagram fa-2x"></i></a>
               <a href="#" className="text-dark me-3"><i className="fab fa-facebook fa-2x"></i></a>
               <a href="#" className="text-dark me-3"><i className="fab fa-twitter fa-2x"></i></a>
               <a href="#" className="text-dark me-3"><i className="fab fa-youtube fa-2x"></i></a>
@@ -361,5 +416,3 @@ function ForumsPage() {
 }
 
 export default ForumsPage;
-
-
