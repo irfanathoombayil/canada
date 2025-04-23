@@ -21,7 +21,7 @@ console.log("newscontroller")
                return res.status(200).json({message:"News created"})
            }
            else{
-               return res.status(400).json({message:"Unable to create news"})
+               return res.status(400).json({message:"Unable to create news..................."})
            }
        })
 
